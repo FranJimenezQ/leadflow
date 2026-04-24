@@ -1,0 +1,15 @@
+#Dependencies
+frontend/node_modules
+backend/node_modules/
+
+# Build outputs
+frontend/dist/
+backend/dist/
+
+# Environment files
+.env
+frontend/.env
+backend/.env
+
+# N8N data
+n8n_data/
