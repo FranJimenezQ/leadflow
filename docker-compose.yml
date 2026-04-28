@@ -1,0 +1,25 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: leadflow-mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=leadflow  
+
+  n8n:
+    image: n8nio/n8n
+    container_name: leadflow-n8n
+    ports:
+      - 5678:5678
+    volumes:
+      - n8n-data:/home/node/.n8n
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=false
+      - WEBHOOK_URL=http://localhost:5678
+  
+volumes:
+  mongo-data:
+  n8n-data:
