@@ -1,0 +1,26 @@
+/* Color variables */
+:root {
+    --color-background-primary: #30302e;
+    --color-background-secondary: #fff;
+    --color-border-primary: #ccc;
+    --color-border-secondary: #999;
+    --color-border-tertiary: #e5e5e5;
+    --color-text-primary: #faf9f5;
+    --color-text-secondary: #c2c0b6;
+    --color-text-tertiary: #999;
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+    --color-info: #17a2b8;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-primary);
+}

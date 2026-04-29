@@ -6,7 +6,6 @@ import Navbar from "./components/layout/Navbar.jsx";
 function App() {
     return (
         <BrowserRouter>
-            <h1>LeadFlow CRM</h1>
             <Navbar />
             <Routes>
                 <Route path="/" element={<Navigate to="/pipeline" />} />
