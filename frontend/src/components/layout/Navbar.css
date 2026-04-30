@@ -20,8 +20,9 @@
     color: var(--color-text-primary);
 }
 
-.navbar-collapse {
+.navbar-links {
     display: flex;
+    gap: 24px;
     align-items: center;
 }
 
@@ -37,16 +38,20 @@
     cursor: pointer;
 }
 
-.nav-link {
+.navbar-link {
     color: var(--color-text-secondary);
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.nav-link.active {
+.navbar-link.active {
     color: var(--color-text-primary);
     border-bottom: 2px solid #533AB7;
+}
+
+.navbar-link:hover {
+    color: var(--color-text-primary);
 }
 
 .new-lead-button {
