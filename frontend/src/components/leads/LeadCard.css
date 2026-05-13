@@ -1,0 +1,88 @@
+.lead-card{
+    background-color: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lead-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lead-card-initials{
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    padding: 4px 8px;
+    border-radius: var(--border-radius-full);
+    font-weight: bold;
+}
+
+.lead-card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lead-card-name{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+}
+
+.lead-card-company{
+    color: var(--color-text-secondary);
+}
+
+.lead-card-notes{
+    color: var(--color-text-tertiary);
+}
+
+.lead-card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lead-card-button{
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    border: none;
+    padding: 4px 8px;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+}
+
+.lead-badge{
+    font-size: 12px;
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    padding: 4px 8px;
+    border-radius: var(--border-radius-md);
+}
+
+.badge-new{
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+.badge-contacted{
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary);
+}
+.badge-proposal{
+    background-color: var(--color-success);
+    color: var(--color-text-primary);
+}
+.badge-closed{
+    background-color: var(--color-danger);
+    color: var(--color-text-primary);
+}
+.badge-lost{
+    background-color: var(--color-warning);
+    color: var(--color-text-primary);
+}

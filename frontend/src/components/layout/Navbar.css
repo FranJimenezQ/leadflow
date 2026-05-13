@@ -53,13 +53,3 @@
 .navbar-link:hover {
     color: var(--color-text-primary);
 }
-
-.new-lead-button {
-    font-size: 12px;
-    background: #533AB7;
-    color: white;
-    border: none;
-    border-radius: var(--border-radius-md);
-    padding: 6px 14px;
-    cursor: pointer;
-}

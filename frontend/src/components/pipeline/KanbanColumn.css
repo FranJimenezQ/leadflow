@@ -1,0 +1,36 @@
+.kanban-column{
+    background-color: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kanban-column-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.kanban-column-title{
+    font-weight: bold;
+}
+
+.kanban-column-count{
+    font-weight: bold;
+    color: var(--color-text-tertiary);
+}
+
+.kanban-column-body{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kanban-column-empty{
+    color: var(--color-text-tertiary);
+}

@@ -23,7 +23,7 @@ const useLeads = () => {
     const createNewLead = async (lead) => {
         try {
             const newLead = await createLead(lead);
-            setLeads([...leads, newLead]);
+            setLeads(prev => [...prev, newLead]);
         } catch (error) {
             setError(error);
         }
@@ -32,7 +32,7 @@ const useLeads = () => {
     const updateLeadById = async (id, lead) => {
         try {
             const updatedLead = await updateLead(id, lead);
-            setLeads(leads.map((lead) => (lead.id === id ? updatedLead : lead)));
+            setLeads(leads.map((lead) => (lead._id === id ? updatedLead : lead)));
         } catch (error) {
             setError(error);
         }
@@ -41,7 +41,7 @@ const useLeads = () => {
     const deleteLeadById = async (id) => {
         try {
             await deleteLead(id);
-            setLeads(leads.filter((lead) => lead.id !== id));
+            setLeads(leads.filter((lead) => lead._id !== id));
         } catch (error) {
             setError(error);
         }

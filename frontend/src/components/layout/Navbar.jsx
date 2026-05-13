@@ -21,9 +21,6 @@ function Navbar() {
                 className={`navbar-link ${location.pathname === '/dashboard' ? 'active' : ''}`}
                     >Dashboard</Link>
                 </div>
-                <div className='new-lead-button'>
-                    <button className='new-lead-button'>+ New Lead</button>
-                </div>
             </div>
         </nav>
     );

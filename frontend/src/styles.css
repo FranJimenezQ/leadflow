@@ -16,6 +16,14 @@
     --color-info: #17a2b8;
     --color-light: #f8f9fa;
     --color-dark: #343a40;
+    --border-radius-xs: 4px;
+    --border-radius-sm: 6px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 10px;
+    --border-radius-xl: 12px;
+    --border-radius-full: 9999px;
+    --border-width-regular: 0.5px;
+
 }
 
 /* Global styles */
