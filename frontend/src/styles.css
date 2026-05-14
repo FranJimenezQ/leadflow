@@ -1,7 +1,7 @@
 /* Color variables */
 :root {
     --color-background-primary: #30302e;
-    --color-background-secondary: #fff;
+    --color-background-secondary: #262624;
     --color-border-primary: #ccc;
     --color-border-secondary: #999;
     --color-border-tertiary: #e5e5e5;
@@ -24,6 +24,15 @@
     --border-radius-full: 9999px;
     --border-width-regular: 0.5px;
 
+    --button-background-primary: #533AB7;
+    --button-background-secondary: #6c757d;
+    --button-background-success: #28a745;
+    --button-background-danger: #dc3545;
+    --button-background-warning: #ffc107;
+    --button-background-info: #17a2b8;
+    --button-background-light: #f8f9fa;
+    --button-background-dark: #343a40;
+
 }
 
 /* Global styles */
@@ -32,3 +41,17 @@ body {
     padding: 0;
     background-color: var(--color-background-primary);
 }
+
+.lead-badge {
+    padding: 4px 8px;
+    border-radius: var(--border-radius-full);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.badge-new { background-color: #E6F1FB; color: #0C447C;}
+.badge-contacted { background: #EEEDFE; color: #3C3489;}
+.badge-proposal { background: #FAEEDA; color: #633806;}
+.badge-closed { background: #EAF3DE; color: #27500A; }
+.badge-lost { background: #FFF0F0; color: #9E0000; }

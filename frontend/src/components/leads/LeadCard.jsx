@@ -20,7 +20,7 @@ function LeadCard({lead, onEdit, onDelete}) {
             <div className="lead-card">
                 <div className="lead-card-header">
                     <div className="lead-card-initials">{initials}</div>
-                    <span className={badge.className}>{badge.label}</span>
+                    <span className={`lead-badge ${badge.className}`}>{badge.label}</span>
             </div>
             <div className="lead-card-body">
                 <div className="lead-card-name">{lead.name}</div>
@@ -30,9 +30,7 @@ function LeadCard({lead, onEdit, onDelete}) {
             <div className="lead-card-footer">
                 <button className="lead-card-button" onClick={() => onEdit(lead)}>Edit</button>
                 <button className="lead-card-button" onClick={() => onDelete(lead._id)}>Delete</button>
-                <span className="lead-badge">
-                    <span className={badge.className}>{badge.label}</span>
-                </span>
+                    <span className={ `lead-badge ${badge.className}`}>{badge.label}</span>
             </div>
             </div>
         )

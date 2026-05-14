@@ -1,0 +1,203 @@
+.leads-page{
+    padding: 24px;
+}
+
+.leads-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text-primary);
+}
+
+.leads-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+}
+
+.leads-actions{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.leads-search{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-background-secondary);
+}
+
+.leads-search:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+.leads-filter {
+    font-size: 16px;
+    padding: 4px 8px;
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-background-secondary);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.leads.btn {
+    font-size: 16px;
+    padding: 4px 8px;
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-background-secondary);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.leads-filter:hover,
+.leads.btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+.leads-table-wrap {
+    background-color: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.leads-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--color-text-primary);
+    border-radius: var(--border-radius-xl);
+}
+
+.leads-table thead {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+}
+
+.leads-table th {
+    padding: 8px;
+    text-align: left;
+    border: 0.5px solid var(--color-border-tertiary);
+}
+
+.leads-table tbody {
+    color: var(--color-text-primary);
+}
+
+.leads-table tr {
+    border: 0.5px solid var(--color-border-tertiary);
+}
+
+.leads-table tr:hover {
+    background-color: var(--color-background-secondary);
+}
+
+.leads-table td {
+    padding: 8px;
+}
+
+
+.lead-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lead-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius-full);
+    object-fit: cover;
+}
+
+.lead-name {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--color-text-primary);
+}
+
+.lead-email {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+}
+
+.lead-notes-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.lead-date {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+}
+
+.lead-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-edit,
+.btn-delete,
+.create-lead-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    background-color: var(--color-primary);
+}
+.create-lead-btn:hover {
+    background-color: var(--button-background-primary);
+}
+.leads-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+}
+
+.leads-empty {
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+}
+
+.leads-loading,
+.leads-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+}
+
+.leads-error {
+    color: var(--color-danger);
+}

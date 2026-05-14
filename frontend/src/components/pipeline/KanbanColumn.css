@@ -18,6 +18,7 @@
 
 .kanban-column-title{
     font-weight: bold;
+    color: var(--color-text-primary);
 }
 
 .kanban-column-count{

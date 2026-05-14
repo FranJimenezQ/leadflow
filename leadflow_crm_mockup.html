@@ -1,0 +1,168 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); }
+  .nav-logo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .nav-links { display: flex; gap: 20px; }
+  .nav-link { font-size: 13px; color: var(--color-text-secondary); cursor: pointer; padding: 4px 0; border-bottom: 2px solid transparent; }
+  .nav-link.active { color: var(--color-text-primary); border-bottom: 2px solid #533AB7; }
+  .section { padding: 24px 20px; }
+  .section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
+  .metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; }
+  .metric-label { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px; }
+  .metric-value { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+  .metric-sub { font-size: 11px; color: var(--color-text-tertiary); margin-top: 2px; }
+  .kanban { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .column { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px; }
+  .col-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .col-title { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); }
+  .col-count { font-size: 11px; background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 10px; padding: 1px 7px; color: var(--color-text-tertiary); }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px; margin-bottom: 8px; }
+  .card-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
+  .card-company { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 8px; }
+  .card-footer { display: flex; align-items: center; justify-content: space-between; }
+  .badge { font-size: 10px; padding: 2px 7px; border-radius: 10px; font-weight: 500; }
+  .badge-new { background: #E6F1FB; color: #0C447C; }
+  .badge-contacted { background: #EEEDFE; color: #3C3489; }
+  .badge-proposal { background: #FAEEDA; color: #633806; }
+  .badge-closed { background: #EAF3DE; color: #27500A; }
+  .badge-lost { background: #FCEBEB; color: #791F1F; }
+  .avatar { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 500; }
+  .av-blue { background: #E6F1FB; color: #0C447C; }
+  .av-purple { background: #EEEDFE; color: #3C3489; }
+  .av-teal { background: #E1F5EE; color: #085041; }
+  .add-card { border: 0.5px dashed var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 8px; text-align: center; font-size: 11px; color: var(--color-text-tertiary); cursor: pointer; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 4px 0 20px; }
+  .view-label { font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 8px; padding: 4px 8px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); display: inline-block; }
+</style>
+
+<div style="border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; background: var(--color-background-primary);">
+
+  <div class="nav">
+    <span class="nav-logo">LeadFlow CRM</span>
+    <div class="nav-links">
+      <span class="nav-link active">Pipeline</span>
+      <span class="nav-link">Leads</span>
+      <span class="nav-link">Dashboard</span>
+    </div>
+    <button style="font-size: 12px; background: #533AB7; color: white; border: none; border-radius: var(--border-radius-md); padding: 6px 14px; cursor: pointer;">+ Nuevo lead</button>
+  </div>
+
+  <div class="section">
+    <div class="view-label">Vista: Pipeline Kanban</div>
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-label">Total leads</div>
+        <div class="metric-value">24</div>
+        <div class="metric-sub">este mes</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">En propuesta</div>
+        <div class="metric-value">6</div>
+        <div class="metric-sub">valor estimado</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Cerrados</div>
+        <div class="metric-value">8</div>
+        <div class="metric-sub">33% conversión</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Sin actividad</div>
+        <div class="metric-value">3</div>
+        <div class="metric-sub">+3 días</div>
+      </div>
+    </div>
+
+    <div class="kanban">
+      <div class="column">
+        <div class="col-header">
+          <span class="col-title">Nuevo</span>
+          <span class="col-count">3</span>
+        </div>
+        <div class="card">
+          <div class="card-name">Ana Mora</div>
+          <div class="card-company">TechCR</div>
+          <div class="card-footer">
+            <span class="badge badge-new">new</span>
+            <div class="avatar av-blue">AM</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-name">Luis Pérez</div>
+          <div class="card-company">Soluciones SA</div>
+          <div class="card-footer">
+            <span class="badge badge-new">new</span>
+            <div class="avatar av-purple">LP</div>
+          </div>
+        </div>
+        <div class="add-card">+ Agregar</div>
+      </div>
+
+      <div class="column">
+        <div class="col-header">
+          <span class="col-title">Contactado</span>
+          <span class="col-count">2</span>
+        </div>
+        <div class="card">
+          <div class="card-name">María Vega</div>
+          <div class="card-company">Innova Labs</div>
+          <div class="card-footer">
+            <span class="badge badge-contacted">contacted</span>
+            <div class="avatar av-teal">MV</div>
+          </div>
+        </div>
+        <div class="add-card">+ Agregar</div>
+      </div>
+
+      <div class="column">
+        <div class="col-header">
+          <span class="col-title">Propuesta</span>
+          <span class="col-count">2</span>
+        </div>
+        <div class="card">
+          <div class="card-name">Carlos Ruiz</div>
+          <div class="card-company">Digital Co</div>
+          <div class="card-footer">
+            <span class="badge badge-proposal">proposal</span>
+            <div class="avatar av-blue">CR</div>
+          </div>
+        </div>
+        <div class="add-card">+ Agregar</div>
+      </div>
+
+      <div class="column">
+        <div class="col-header">
+          <span class="col-title">Cerrado</span>
+          <span class="col-count">2</span>
+        </div>
+        <div class="card">
+          <div class="card-name">Pedro Soto</div>
+          <div class="card-company">WebCR</div>
+          <div class="card-footer">
+            <span class="badge badge-closed">closed</span>
+            <div class="avatar av-teal">PS</div>
+          </div>
+        </div>
+        <div class="add-card">+ Agregar</div>
+      </div>
+
+      <div class="column">
+        <div class="col-header">
+          <span class="col-title">Perdido</span>
+          <span class="col-count">1</span>
+        </div>
+        <div class="card">
+          <div class="card-name">Julia Ríos</div>
+          <div class="card-company">StartupCR</div>
+          <div class="card-footer">
+            <span class="badge badge-lost">lost</span>
+            <div class="avatar av-purple">JR</div>
+          </div>
+        </div>
+        <div class="add-card">+ Agregar</div>
+      </div>
+    </div>
+  </div>
+</div>
