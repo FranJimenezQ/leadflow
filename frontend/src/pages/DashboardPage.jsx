@@ -86,7 +86,8 @@ function DashboardPage() {
                   className="bar"
                   style={{
                     height: `${(s.count / maxCount) * 180}px`,
-                    background: s.color
+                    background: s.color,
+                    opacity: s.count === 0 ? 0.25 : 1
                   }}
                 ></div>
               </div>

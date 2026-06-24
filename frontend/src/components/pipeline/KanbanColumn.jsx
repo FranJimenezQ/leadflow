@@ -19,7 +19,7 @@ function KanbanColumn({status, leads, onEdit, onDelete}) {
             </div>
 
             <div className="kanban-column-body">
-                {filteredLeads.lead === 0 ? (
+                {filteredLeads.length === 0 ? (
                     <span className="kanban-column-empty">No leads in this column</span>
                 ) : (
                     filteredLeads.map((lead) => (
